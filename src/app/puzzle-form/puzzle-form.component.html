@@ -1,0 +1,13 @@
+<h1>Select Puzzle</h1>
+<br />
+<form [formGroup]="selectPuzzleForm" (submit)="getGame()">
+  <mat-form-field>
+    <mat-label>Select Puzzle</mat-label>
+    <mat-select [formControlName]="formKeys.SELECTED_PUZZLE">
+      <mat-option *ngFor="let type of puzzleTypes" [value]="type.noOfColumns">{{
+        type.displayText
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">GET GAME</button>
+</form>

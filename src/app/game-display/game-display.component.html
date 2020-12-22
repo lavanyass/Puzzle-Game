@@ -1,0 +1,10 @@
+<mat-sidenav-container>
+  <app-puzzle-form
+    *ngIf="startGamevalue === 0"
+    (gameStarted)="startGame($event)"
+  ></app-puzzle-form>
+  <app-display-icons
+    *ngIf="startGamevalue > 0"
+    [gameNoOfColumns]="startGamevalue"
+  ></app-display-icons>
+</mat-sidenav-container>
